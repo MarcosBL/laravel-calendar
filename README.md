@@ -1,4 +1,4 @@
-Laravel 4 Calendar
+Laravel 4 Calendar .... With Monday as "Start of Week"
 ==================
 
 Flexible Calendar for Laravel 4, supports Month, Week and Day Views and multiple events per date.
@@ -9,7 +9,7 @@ Install:
 
 Add this to "require" in composer.json:
 
-		"makzumi/calendar": "dev-master"
+		"marcosbl/calendar": "dev-master"
 
 After that run a composer update, then in app.php add:
 
