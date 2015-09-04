@@ -240,6 +240,7 @@ class Calendar {
 
 		$this->week_days = array();
 		$mlen = $this->days_month[intval($this->month) - 1];
+		if($this->month==2 AND ((($this->year % 4) == 0) && ((($this->year % 100) != 0) || (($this->year %400) == 0)))) { $mlen = $mlen+1; }
 
 		$h = "<tr class='" . $this->labelsClass . "'>";
 		$h .= "<td>&nbsp;</td>";
@@ -273,6 +274,7 @@ class Calendar {
 		//Add the following line if you want to start the week with monday instead of sunday. Or change the number to suit your needs.
 		$startingDay = $startingDay - 1;
 		$monthLength = $this->days_month[$this->month - 1];
+		if($this->month==2 AND ((($this->year % 4) == 0) && ((($this->year % 100) != 0) || (($this->year %400) == 0)))) { $monthLength = $monthLength+1; }
 		$h = "<tr>";
 		for ($i = $startingDay == 7 ? 1 : 0; $i < 9; $i++) {
 			for ($j = 0; $j <= 6; $j++) {
